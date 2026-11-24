@@ -33,7 +33,7 @@ class Settings(BaseSettings):
     OPENAI_EMBEDDING_URL: str = "https://api.openai.com/v1"
 
     # Security & CORS
-    CORS_ORIGINS: str = "http://localhost:5173,http://127.0.0.1:5173,http://localhost:3000,https://cgtmse-69w5.vercel.app,*"
+    CORS_ORIGINS: str = "http://localhost:5173,http://127.0.0.1:5173,http://localhost:3000,https://cgtmse-chatbot.vercel.app,https://cgtmse-69w5.vercel.app,*"
     RATE_LIMIT_PER_MINUTE: int = 60
     MAX_UPLOAD_SIZE_MB: int = 25
     API_SECRET_KEY: Optional[str] = None

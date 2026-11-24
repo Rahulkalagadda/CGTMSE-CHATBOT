@@ -12,7 +12,7 @@ from app.services.embedder import embedder
 from app.services.qdrant_service import qdrant_service
 from qdrant_client.http import models
 
-def main():
+def ingest_faqs():
     json_path = BACKEND_DIR / "data" / "cgtmse_gms_100_faqs.json"
     if not json_path.exists():
         print(f"[Error] File not found: {json_path}")
@@ -113,5 +113,7 @@ def main():
         print(f"Found: {r['title']} (Score: {r['score']:.4f})")
         print(f"Snippet: {r['content'][:120]}...\n")
 
+    main = ingest_faqs
+
 if __name__ == "__main__":
-    main()
+    ingest_faqs()

@@ -40,13 +40,13 @@ Under your Railway service -> **Variables** tab, add the following:
 | `QDRANT_COLLECTION` | `cgtmse_knowledge_base` |
 | `EMBEDDING_PROVIDER` | `builtin` |
 | `EMBEDDING_DIMENSION` | `384` |
-| `CORS_ORIGINS` | `http://localhost:5173,https://cgtmse-69w5.vercel.app,*` |
+| `CORS_ORIGINS` | `http://localhost:5173,https://cgtmse-chatbot.vercel.app,*` |
 | `RATE_LIMIT_PER_MINUTE` | `60` |
 
 ### Step 4: Generate Domain
 1. In Railway service -> **Settings** -> **Public Networking**, click **Generate Domain**.
-2. Note your Railway public URL: `https://cgtmse-production.up.railway.app`.
-3. Verify it by visiting: `https://cgtmse-production.up.railway.app/health`.
+2. Note your Railway public URL: `https://cgtmse-chatbot-production.up.railway.app`.
+3. Verify it by visiting: `https://cgtmse-chatbot-production.up.railway.app/health`.
 
 ---
 
@@ -69,7 +69,7 @@ In Vercel -> **Environment Variables**, add:
 
 | Variable Name | Value |
 | :--- | :--- |
-| `VITE_N8N_WEBHOOK_URL` | `https://cgtmse-production.up.railway.app/webhook/websiteflow` |
+| `VITE_N8N_WEBHOOK_URL` | `https://cgtmse-chatbot-production.up.railway.app/webhook/websiteflow` |
 
 ### Step 3: Deploy
 1. Click **Deploy**.
@@ -80,7 +80,7 @@ In Vercel -> **Environment Variables**, add:
 
 ## Part 3: Verification Checklist
 
-- [ ] `GET https://cgtmse-production.up.railway.app/health` returns status `healthy`
-- [ ] `POST https://cgtmse-production.up.railway.app/webhook/websiteflow` returns SSE token streaming
+- [ ] `GET https://cgtmse-chatbot-production.up.railway.app/health` returns status `healthy`
+- [ ] `POST https://cgtmse-chatbot-production.up.railway.app/webhook/websiteflow` returns SSE token streaming
 - [ ] Vercel app loads with theme toggle, suggestions, and real-time streaming
 - [ ] Input exceeding 4,000 characters displays the red context warning banner
